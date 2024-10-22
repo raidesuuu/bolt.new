@@ -27,11 +27,11 @@ const viewTransition = { ease: cubicEasingFn };
 const sliderOptions: SliderOptions<WorkbenchViewType> = {
   left: {
     value: 'code',
-    text: 'Code',
+    text: 'コード',
   },
   right: {
     value: 'preview',
-    text: 'Preview',
+    text: 'プレビュー',
   },
 };
 
@@ -129,7 +129,7 @@ export const Workbench = memo(({ chatStarted, isStreaming }: WorkspaceProps) => 
                     }}
                   >
                     <div className="i-ph:terminal" />
-                    Toggle Terminal
+                    ターミナルを切り替える
                   </PanelHeaderButton>
                 )}
                 <IconButton

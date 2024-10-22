@@ -31,7 +31,7 @@ export function Chat() {
       <ToastContainer
         closeButton={({ closeToast }) => {
           return (
-            <button className="Toastify__close-button" onClick={closeToast}>
+            <button aria-label='Close' className="Toastify__close-button" onClick={closeToast}>
               <div className="i-ph:x text-lg" />
             </button>
           );
@@ -61,6 +61,7 @@ export function Chat() {
 
 interface ChatProps {
   initialMessages: Message[];
+  // model: ModelType;
   storeMessageHistory: (messages: Message[]) => Promise<void>;
 }
 

@@ -1,5 +1,6 @@
 import { type ActionFunctionArgs } from '@remix-run/cloudflare';
 import { MAX_RESPONSE_SEGMENTS, MAX_TOKENS } from '~/lib/.server/llm/constants';
+import type { ModelType } from '~/lib/.server/llm/model';
 import { CONTINUE_PROMPT } from '~/lib/.server/llm/prompts';
 import { streamText, type Messages, type StreamingOptions } from '~/lib/.server/llm/stream-text';
 import SwitchableStream from '~/lib/.server/llm/switchable-stream';
@@ -9,11 +10,23 @@ export async function action(args: ActionFunctionArgs) {
 }
 
 async function chatAction({ context, request }: ActionFunctionArgs) {
-  const { messages } = await request.json<{ messages: Messages }>();
+
+  const { messages, model } = await request.json<{ messages: Messages, model: ModelType }>();
 
   const stream = new SwitchableStream();
 
   try {
+    const cookieHeader = request.headers.get("Cookie");
+  
+    // クッキーを解析
+    const cookies: { [key: string]: string } = {};
+    if (cookieHeader) {
+      cookieHeader.split('; ').forEach(cookie => {
+        const [name, value] = cookie.split('=');
+        cookies[name] = decodeURIComponent(value);
+      });
+    }
+
     const options: StreamingOptions = {
       toolChoice: 'none',
       onFinish: async ({ text: content, finishReason }) => {
@@ -32,13 +45,13 @@ async function chatAction({ context, request }: ActionFunctionArgs) {
         messages.push({ role: 'assistant', content });
         messages.push({ role: 'user', content: CONTINUE_PROMPT });
 
-        const result = await streamText(messages, context.cloudflare.env, options);
+        const result = await streamText(messages, cookies["uid"], options);
 
         return stream.switchSource(result.toAIStream());
       },
     };
 
-    const result = await streamText(messages, context.cloudflare.env, options);
+    const result = await streamText(messages, cookies["uid"], options);
 
     stream.switchSource(result.toAIStream());
 

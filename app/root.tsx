@@ -13,6 +13,29 @@ import xtermStyles from '@xterm/xterm/css/xterm.css?url';
 
 import 'virtual:uno.css';
 
+const originalWarn = console.warn;
+const originalError = console.error;
+
+console.warn = (...args) => {
+  if (
+    typeof args[0] === 'string' &&
+    args[0].includes('You provided a `value` prop to a form field without an `onChange` handler')
+  ) {
+    return; // この警告を無視
+  }
+  originalWarn(...args); // 他の警告は表示
+};
+
+console.error = (...args) => {
+  if (
+    typeof args[0] === 'string' &&
+    args[0].includes('You provided a `value` prop to a form field without an `onChange` handler')
+  ) {
+    return; // この警告を無視
+  }
+  originalError(...args); // 他の警告は表示
+};
+
 export const links: LinksFunction = () => [
   {
     rel: 'icon',

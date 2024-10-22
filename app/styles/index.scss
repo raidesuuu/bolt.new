@@ -12,3 +12,15 @@ body {
   height: 100%;
   width: 100%;
 }
+
+
+html[data-theme="dark"] {
+  select {
+    background-color: #141414 !important;
+  }
+
+  option {
+    background-color: #141414 !important;
+  }
+}
+

@@ -1,54 +1,51 @@
-[![Bolt.new: AI-Powered Full-Stack Web Development in the Browser](./public/social_preview_index.jpg)](https://bolt.new)
+# Bolt+: ブラウザで動くAIパワードのフルスタックウェブ開発、すべて無料！
 
-# Bolt.new: AI-Powered Full-Stack Web Development in the Browser
+Bolt+のオリジナルは、bolt.newです。オリジナルはこちら。https://github.com/stackblitz/bolt.new
 
-Bolt.new is an AI-powered web development agent that allows you to prompt, run, edit, and deploy full-stack applications directly from your browser—no local setup required. If you're here to build your own AI-powered web dev agent using the Bolt open source codebase, [click here to get started!](./CONTRIBUTING.md)
+Bolt+は、ブラウザから直接、フルスタックアプリケーションをプロンプトで作成、実行、編集、デプロイできるAIパワードのウェブ開発エージェントです。ローカルセットアップは不要です。Boltのオープンソースコードベースを使用して、自分のAIパワードウェブ開発エージェントを作成したい場合は、[こちらをクリックして始めてください！](./CONTRIBUTING.md)
 
-## What Makes Bolt.new Different
+## Bolt+の特長
 
-Claude, v0, etc are incredible- but you can't install packages, run backends or edit code. That’s where Bolt.new stands out:
+Claude、v0などは素晴らしいですが、パッケージをインストールしたり、バックエンドを実行したり、コードを編集することはできません。Bolt+はここで差別化されます：
 
-- **Full-Stack in the Browser**: Bolt.new integrates cutting-edge AI models with an in-browser development environment powered by **StackBlitz’s WebContainers**. This allows you to:
-  - Install and run npm tools and libraries (like Vite, Next.js, and more)
-  - Run Node.js servers
-  - Interact with third-party APIs
-  - Deploy to production from chat
-  - Share your work via a URL
+- **ブラウザでフルスタック開発**: Bolt+は、最先端のAIモデルを、**StackBlitzのWebContainers**を利用したブラウザ内開発環境と統合します。これにより、次のことが可能になります：
+  - npmツールやライブラリ（Vite、Next.jsなど）をインストールして実行
+  - Node.jsサーバーの実行
+  - サードパーティAPIとの連携
+  - チャットからプロダクションにデプロイ
+  - 作業内容をURLで共有
 
-- **AI with Environment Control**: Unlike traditional dev environments where the AI can only assist in code generation, Bolt.new gives AI models **complete control** over the entire  environment including the filesystem, node server, package manager, terminal, and browser console. This empowers AI agents to handle the entire app lifecycle—from creation to deployment.
+- **AIが環境をコントロール**: 従来の開発環境では、AIはコード生成の補助しかできませんが、Bolt+はAIモデルにファイルシステム、Nodeサーバー、パッケージマネージャー、ターミナル、ブラウザコンソールなど、環境全体を完全にコントロールさせることができます。これにより、アプリの作成からデプロイまで、全てをAIエージェントが処理できるようになります。
 
-Whether you’re an experienced developer, a PM or designer, Bolt.new allows you to build production-grade full-stack applications with ease.
+経験豊富な開発者でも、PMやデザイナーでも、Bolt+を使えばプロダクションレベルのフルスタックアプリケーションを簡単に構築できます。
 
-For developers interested in building their own AI-powered development tools with WebContainers, check out the open-source Bolt codebase in this repo!
+WebContainersを使用して独自のAIパワード開発ツールを構築したい開発者向けには、このリポジトリ内のBoltのオープンソースコードベースをご覧ください！
 
-## Tips and Tricks
+## ヒント
 
-Here are some tips to get the most out of Bolt.new:
+Bolt+を最大限に活用するためのヒントをいくつか紹介します：
 
-- **Be specific about your stack**: If you want to use specific frameworks or libraries (like Astro, Tailwind, ShadCN, or any other popular JavaScript framework), mention them in your initial prompt to ensure Bolt scaffolds the project accordingly.
+- **使用するスタックを具体的に指定**: 特定のフレームワークやライブラリ（Astro、Tailwind、ShadCNなどの人気のJavaScriptフレームワーク）を使用したい場合、最初のプロンプトでそれを指定して、Boltがプロジェクトを適切に構築できるようにします。
 
-- **Use the enhance prompt icon**: Before sending your prompt, try clicking the 'enhance' icon to have the AI model help you refine your prompt, then edit the results before submitting.
+- **「プロンプトを強化」アイコンを使用**: プロンプトを送信する前に「強化」アイコンをクリックして、AIモデルにプロンプトを改善させ、それを編集してから送信するのも効果的です。
 
-- **Scaffold the basics first, then add features**: Make sure the basic structure of your application is in place before diving into more advanced functionality. This helps Bolt understand the foundation of your project and ensure everything is wired up right before building out more advanced functionality.
+- **まず基本を構築し、その後に機能を追加**: 基本的なアプリの構造をまず整えてから、より高度な機能に取り掛かるようにしましょう。これにより、Boltがプロジェクトの基礎を理解し、高度な機能を構築する前にすべてが正しく接続されていることを確認できます。
 
-- **Batch simple instructions**: Save time by combining simple instructions into one message. For example, you can ask Bolt to change the color scheme, add mobile responsiveness, and restart the dev server, all in one go saving you time and reducing API credit consumption significantly.
+- **簡単な指示をまとめる**: 配色の変更、モバイル対応の追加、開発サーバーの再起動などの単純な指示をまとめて1つのメッセージにすることで、時間を節約し、APIクレジットの消費も大幅に減らせます。
 
 ## FAQs
 
-**Where do I sign up for a paid plan?**  
-Bolt.new is free to get started. If you need more AI tokens or want private projects, you can purchase a paid subscription in your [Bolt.new](https://bolt.new) settings, in the lower-left hand corner of the application. 
+**無料使用制限はありますか？**  
+いいえ、Bolt+には有料プランがありません。使用制限はなく、無限にAIを使用できます。
 
-**What happens if I hit the free usage limit?**  
-Once your free daily token limit is reached, AI interactions are paused until the next day or until you upgrade your plan.
+**Boltはベータ版ですか？**  
+はい、Bolt+はベータ版です。現在、フィードバックをもとに改良を続けています。
 
-**Is Bolt in beta?**  
-Yes, Bolt.new is in beta, and we are actively improving it based on feedback.
+**Bolt+に関する問題はどのように報告すればよいですか？**  
+[Issuesセクション](https://github.com/raidesuuu/bolt.new/issues)にて、問題の報告や新機能のリクエストを行えます。すでに同じ問題やリクエストが投稿されていないか、検索機能を使って確認してください。
 
-**How can I report Bolt.new issues?**  
-Check out the [Issues section](https://github.com/stackblitz/bolt.new/issues) to report an issue or request a new feature. Please use the search feature to check if someone else has already submitted the same issue/request.
+**Boltで使用できるフレームワークやライブラリは何ですか？**  
+Bolt+は、ほとんどの人気JavaScriptフレームワークやライブラリに対応しています。StackBlitzで動作するものであれば、Bolt+でも動作します。
 
-**What frameworks/libraries currently work on Bolt?**  
-Bolt.new supports most popular JavaScript frameworks and libraries. If it runs on StackBlitz, it will run on Bolt.new as well.
-
-**How can I add make sure my framework/project works well in bolt?**  
-We are excited to work with the JavaScript ecosystem to improve functionality in Bolt. Reach out to us via [hello@stackblitz.com](mailto:hello@stackblitz.com) to discuss how we can partner!
+**自分のフレームワークやプロジェクトをBoltで動作させるにはどうすればよいですか？**  
+JavaScriptエコシステムと協力して、Boltでの機能を向上させることに取り組んでいます。連絡を取りたい方は[hello@stackblitz.com](mailto:hello@stackblitz.com)までご連絡ください！
